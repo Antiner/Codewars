@@ -8,4 +8,3 @@ Given a random non-negative number, you have to return the digits of this number
 def digitize(n: int):
     return list(map(int, str(n)))[::-1]
 
-
