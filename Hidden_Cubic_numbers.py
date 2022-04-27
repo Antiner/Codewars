@@ -26,7 +26,7 @@ import re
 
 PATTERN = re.compile(r'(\d{1,3})')
 
-def is_sum_of_cubes(s):
+def is_sum_of_cubes_2(s):
     found = list(filter(lambda nStr: int(nStr) == sum(int(d)**3 for d in nStr), PATTERN.findall(s)))
     return "Unlucky" if not found else "{} {} {}".format(' '.join(found), sum(map(int, found)), 'Lucky')
 
