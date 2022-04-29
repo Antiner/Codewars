@@ -15,6 +15,7 @@ side = {"N": 0, "NE": 45, "E": 90, "SE": 135, "S": 180, "SW": 225, "W": 270, "NW
 def direction(facing, turn):
     return [k for k, v in side.items() if v == ((side.get(facing) + turn) % 360)][0]
 
+
 # Best practice
 
 DIRECTIONS = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW']
@@ -23,17 +24,18 @@ DIRECTIONS = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW']
 def direction_1(facing, turn):
     return DIRECTIONS[(turn // 45 + DIRECTIONS.index(facing)) % 8]
 
+
 # Clever
 
-com = {"N":360,
-       "NE":45,
-       "E":90,
-       "SE":135,
-       "S":180,
-       "SW":225,
-       "W":270,
-       "NW":315,
-       "NN":0}
+com = {"N": 360,
+       "NE": 45,
+       "E": 90,
+       "SE": 135,
+       "S": 180,
+       "SW": 225,
+       "W": 270,
+       "NW": 315,
+       "NN": 0}
 
 
 def direction_2(facing, turn):
@@ -74,7 +76,7 @@ def direction_2(facing, turn):
                 x = 45 + y
         elif 720 < turn <= 1080:
             if turn > 1035:
-                y = turn -720
+                y = turn - 720
                 x = (45 + y) - 360
             elif turn <= 1035:
                 y = turn - 720
@@ -120,7 +122,7 @@ def direction_2(facing, turn):
                 x = 90 + y
         elif 720 < turn <= 1080:
             if turn > 990:
-                y = turn -720
+                y = turn - 720
                 x = (90 + y) - 360
             elif turn <= 990:
                 y = turn - 720
@@ -166,7 +168,7 @@ def direction_2(facing, turn):
                 x = 135 + y
         elif 720 < turn <= 1080:
             if turn > 945:
-                y = turn -720
+                y = turn - 720
                 x = (135 + y) - 360
             elif turn <= 945:
                 y = turn - 720
@@ -212,7 +214,7 @@ def direction_2(facing, turn):
                 x = 180 + y
         elif 720 < turn <= 1080:
             if turn > 900:
-                y = turn -720
+                y = turn - 720
                 x = (180 + y) - 360
             elif turn <= 900:
                 y = turn - 720
@@ -258,7 +260,7 @@ def direction_2(facing, turn):
                 x = 225 + y
         elif 720 < turn <= 1080:
             if turn > 855:
-                y = turn -720
+                y = turn - 720
                 x = (225 + y) - 360
             elif turn <= 855:
                 y = turn - 720
@@ -304,7 +306,7 @@ def direction_2(facing, turn):
                 x = 270 + y
         elif 720 < turn <= 1080:
             if turn > 810:
-                y = turn -720
+                y = turn - 720
                 x = (270 + y) - 360
             elif turn <= 810:
                 y = turn - 720
@@ -350,7 +352,7 @@ def direction_2(facing, turn):
                 x = 315 + y
         elif 720 < turn <= 1080:
             if turn > 765:
-                y = turn -720
+                y = turn - 720
                 x = (315 + y) - 360
             elif turn <= 765:
                 y = turn - 720
